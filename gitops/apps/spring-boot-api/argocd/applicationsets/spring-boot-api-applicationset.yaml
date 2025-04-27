@@ -20,6 +20,7 @@ spec:
       name: '{{name}}-spring-boot-api'
     spec:
       project: spring-boot-api
+      createNamespace: true
       source:
         repoURL: https://github.com/305532/in
         targetRevision: HEAD
