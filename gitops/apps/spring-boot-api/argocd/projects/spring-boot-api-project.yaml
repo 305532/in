@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: spring-boot-api
+  namespace: argocd
+spec:
+  description: Spring-Boot API
+  sourceRepos:
+    - https://github.com/305532/in
+  destinations:
+    - server: https://dev-global-cluster-0
+      namespace: spring-boot-api-dev
+    - server: https://prd-global-cluster-5
+      namespace: spring-boot-api-prd
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

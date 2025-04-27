@@ -1,0 +1,5 @@
+replicaCount: 3
+profile: dev
+
+ingress:
+  host: dev.inpost.com

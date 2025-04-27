@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  repository: busybox
+  tag: stable
+
+profile: dev
+
+ingress:
+  host: localhost
+
+ports:
+  api:
+    containerPort: 8080
+    servicePort: 8080
+  logs:
+    containerPort: 8081
+    servicePort: 8081
+  soap:
+    containerPort: 8082
+    servicePort: 8082
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "200m"
+    memory: "256Mi"
